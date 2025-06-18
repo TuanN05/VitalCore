@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chăm Sóc Sức Khỏe</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class="container">
+      <h1>Chăm Sóc Sức Khỏe</h1>
+      <nav>
+        <ul>
+          <li><i class="fa-solid fa-house"></i> <a href="#">Home</a></li>
+          <li><a href="#about">Giới thiệu</a></li>
+          <li><a href="#team">Thành viên</a></li>
+          <li><a href="#contact">Liên hệ</a></li>
+          <a href="../tài khoản/sign up/index.html" class="signup-btn">Sign Up</a>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-text" data-aos="fade-up">
+      <h2>Chào mừng đến với website chăm sóc sức khỏe</h2>
+      <p>Cùng nhau nâng cao sức khỏe mỗi ngày!</p>
+    </div>
+  </section>
+
+  <!-- GIỚI THIỆU -->
+  <section id="about" data-aos="fade-up">
+    <div class="container">
+      <h2>Giới thiệu</h2>
+      <p>
+        Website được xây dựng nhằm mục đích hỗ trợ người dùng nâng cao sức khỏe thể chất và tinh thần thông qua các bài tập, lời khuyên và công cụ chăm sóc bản thân.
+      </p>
+    </div>
+  </section>
+
+  <!-- THÀNH VIÊN -->
+  <section id="team" data-aos="fade-up">
+    <div class="container">
+      <h2>Thành viên thực hiện</h2>
+      <div class="team-layout">
+        <div class="team-members">
+          <div class="member-card" data-aos="fade-right">
+            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Thành viên 1" />
+            <div class="member-info">
+              <h3>Nguyễn Văn A</h3>
+              <p>Sinh viên CNTT - Thiết kế giao diện</p>
+              <a href="#" class="github-link"><i class="fab fa-github"></i> GitHub</a>
+            </div>
+          </div>
+
+          <div class="member-card" data-aos="fade-left">
+            <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Thành viên 2" />
+            <div class="member-info">
+              <h3>Trần Thị B</h3>
+              <p>Phát triển chức năng web</p>
+              <a href="#" class="github-link"><i class="fab fa-github"></i> GitHub</a>
+            </div>
+          </div>
+
+          <div class="member-card" data-aos="fade-right">
+            <img src="https://randomuser.me/api/portraits/men/60.jpg" alt="Thành viên 3" />
+            <div class="member-info">
+              <h3>Lê Văn C</h3>
+              <p>Xử lý nội dung và dữ liệu</p>
+              <a href="#" class="github-link"><i class="fab fa-github"></i> GitHub</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="team-image" data-aos="zoom-in">
+          <img src="./img/videoframe_3714.png" alt="Minh họa teamwork" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LIÊN HỆ -->
+  <section id="contact" data-aos="fade-up">
+    <div class="container contact-box">
+      <h2>Liên hệ</h2>
+      <p>📞 Số điện thoại: 0123 456 789</p>
+      <div class="social-icons">
+        <i class="fab fa-facebook-f"></i>
+        <i class="fab fa-twitter"></i>
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-linkedin-in"></i>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-content">
+      <p>© 2025 Nhóm Chăm Sóc Sức Khỏe</p>
+      <p class="thank-you">Cảm ơn bạn đã ghé thăm trang web của chúng tôi!</p>
+    </div>
+  </footer>
+
+  <!-- Script AOS -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000, once: true });
+  </script>
+</body>
+</html>
