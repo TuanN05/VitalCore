@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="vi" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Coach - Hỏi đáp Sức khỏe</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="container">
+        <a href="index.html" class="logo">FitAI</a>
+        <ul class="nav-links">
+          <li><a href="index.html">Trang Chủ</a></li>
+          <li><a href="nutrition.html">Dinh Dưỡng & Luyện Tập</a></li>
+          <li><a href="chat.html" class="active">AI Coach</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="about.html">Giới Thiệu</a></li>
+          <li><a href="team.html">Thành Viên</a></li>
+        </ul>
+        <div class="nav-auth">
+          <a href="login.html" id="login-btn" class="btn btn-secondary"
+            >Đăng Nhập</a
+          >
+          <div id="user-info" style="display: none">
+            <span id="username-display"></span>
+            <a href="user.html" class="btn btn-primary">Tài khoản</a>
+            <button id="logout-btn" class="btn btn-secondary">Đăng xuất</button>
+          </div>
+        </div>
+        <button id="theme-toggle" class="theme-toggle-btn">🌙</button>
+      </div>
+    </nav>
+
+    <main class="page-content">
+      <div class="chat-container card">
+        <div class="chat-window" id="chat-window">
+          <div class="chat-message ai-message">
+            Xin chào! Tôi là FitAI Coach. Tôi có thể giúp gì cho bạn về dinh
+            dưỡng hoặc tập luyện?
+          </div>
+        </div>
+        <form class="chat-input-form" id="chat-form">
+          <input
+            type="text"
+            id="chat-input"
+            placeholder="Nhập câu hỏi của bạn..."
+            autocomplete="off"
+            required
+          />
+          <button type="submit">Gửi</button>
+        </form>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2025 FitAI Hub. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="js/auth.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

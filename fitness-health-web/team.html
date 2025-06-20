@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="vi" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thành viên Dự án - FitAI Hub</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+      .team-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+      }
+      .team-member-card {
+        background-color: var(--background-color);
+        padding: 2rem;
+        text-align: center;
+        border-radius: var(--border-radius);
+        border: 1px solid var(--border-color);
+      }
+      .team-member-card .avatar {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 1rem;
+        border: 3px solid var(--primary-color);
+        background-color: var(--surface-color); /* Fallback color */
+      }
+      .team-member-card h3 {
+        margin-bottom: 0.25rem;
+        color: var(--primary-color);
+      }
+      .team-member-card p {
+        font-style: italic;
+        opacity: 0.8;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="container">
+        <a href="index.html" class="logo">FitAI</a>
+        <ul class="nav-links">
+          <li><a href="index.html">Trang Chủ</a></li>
+          <li><a href="nutrition.html">Dinh Dưỡng & Luyện Tập</a></li>
+          <li><a href="chat.html">AI Coach</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="about.html">Giới Thiệu</a></li>
+          <li><a href="team.html" class="active">Thành Viên</a></li>
+        </ul>
+        <div class="nav-auth">
+          <a href="login.html" id="login-btn" class="btn btn-secondary"
+            >Đăng Nhập</a
+          >
+          <div id="user-info" style="display: none">
+            <span id="username-display"></span>
+            <a href="user.html" class="btn btn-primary">Tài khoản</a>
+            <button id="logout-btn" class="btn btn-secondary">Đăng xuất</button>
+          </div>
+        </div>
+        <button id="theme-toggle" class="theme-toggle-btn">🌙</button>
+      </div>
+    </nav>
+
+    <main class="container page-content">
+      <div class="card">
+        <h1>Thành Viên Dự Án</h1>
+        <p>Những người đã đóng góp tâm huyết để xây dựng nên FitAI Hub.</p>
+
+        <div class="team-grid">
+          <div class="team-member-card">
+            <img
+              src="https://images.unsplash.com/photo-1511367461989-f85a21fda167?auto=format&fit=crop&w=400&q=80"
+              alt="Ảnh đại diện"
+              class="avatar"
+            />
+            <h3>Nguyễn Văn A</h3>
+            <p>Project Manager & Lead Developer</p>
+          </div>
+          <div class="team-member-card">
+            <img
+              src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=400&q=80"
+              alt="Ảnh đại diện"
+              class="avatar"
+            />
+            <h3>Trần Thị B</h3>
+            <p>UI/UX Designer</p>
+          </div>
+          <div class="team-member-card">
+            <img
+              src="https://images.unsplash.com/photo-1519340333755-c1aa5571fd46?auto=format&fit=crop&w=400&q=80"
+              alt="Ảnh đại diện"
+              class="avatar"
+            />
+            <h3>Lê Văn C</h3>
+            <p>Frontend Developer & AI Specialist</p>
+          </div>
+          <div class="team-member-card">
+            <img
+              src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=400&q=80"
+              alt="Ảnh đại diện"
+              class="avatar"
+            />
+            <h3>Phạm Thị D</h3>
+            <p>Content Creator & QA Tester</p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2025 FitAI Hub. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="js/auth.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

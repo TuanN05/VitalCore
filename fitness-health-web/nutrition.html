@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="vi" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tính toán Dinh dưỡng & Luyện tập</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="container">
+        <a href="index.html" class="logo">FitAI</a>
+        <ul class="nav-links">
+          <li><a href="index.html">Trang Chủ</a></li>
+          <li>
+            <a href="nutrition.html" class="active">Dinh Dưỡng & Luyện Tập</a>
+          </li>
+          <li><a href="chat.html">AI Coach</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="about.html">Giới Thiệu</a></li>
+          <li><a href="team.html">Thành Viên</a></li>
+        </ul>
+        <div class="nav-auth">
+          <a href="login.html" id="login-btn" class="btn btn-secondary"
+            >Đăng Nhập</a
+          >
+          <div id="user-info" style="display: none">
+            <span id="username-display"></span>
+            <a href="user.html" class="btn btn-primary">Tài khoản</a>
+            <button id="logout-btn" class="btn btn-secondary">Đăng xuất</button>
+          </div>
+        </div>
+        <button id="theme-toggle" class="theme-toggle-btn">🌙</button>
+      </div>
+    </nav>
+
+    <main class="container page-content">
+      <div class="form-container card">
+        <h2>Nhập thông tin của bạn</h2>
+        <p>
+          Hãy cung cấp các thông số dưới đây để hệ thống tính toán nhu cầu năng
+          lượng và dinh dưỡng phù hợp nhất cho bạn.
+        </p>
+        <form id="nutrition-form">
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="name">Họ và Tên</label>
+              <input type="text" id="name" required />
+            </div>
+            <div class="form-group">
+              <label for="age">Tuổi</label>
+              <input type="number" id="age" min="15" max="100" required />
+            </div>
+            <div class="form-group">
+              <label for="gender">Giới tính</label>
+              <select id="gender" required>
+                <option value="male">Nam</option>
+                <option value="female">Nữ</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="height">Chiều cao (cm)</label>
+              <input type="number" id="height" min="100" max="250" required />
+            </div>
+            <div class="form-group">
+              <label for="weight">Cân nặng (kg)</label>
+              <input type="number" id="weight" min="30" max="200" required />
+            </div>
+            <div class="form-group">
+              <label for="activity">Mức độ vận động</label>
+              <select id="activity" required>
+                <option value="1.2">Ít vận động (làm việc văn phòng)</option>
+                <option value="1.375">Vận động nhẹ (tập 1-3 ngày/tuần)</option>
+                <option value="1.55">Vận động vừa (tập 3-5 ngày/tuần)</option>
+                <option value="1.725">
+                  Vận động nhiều (tập 6-7 ngày/tuần)
+                </option>
+                <option value="1.9">Vận động rất nhiều (vận động viên)</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group full-width">
+            <label for="goal">Mục tiêu của bạn</label>
+            <select id="goal" required>
+              <option value="lose">Giảm cân (thâm hụt ~500 kcal)</option>
+              <option value="maintain">Giữ cân</option>
+              <option value="gain">Tăng cân (dư thừa ~500 kcal)</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary btn-lg">
+            Tính toán ngay
+          </button>
+        </form>
+      </div>
+
+      <div id="results" class="card">
+        <h2 id="result-title">Kết quả dành cho bạn</h2>
+        <div class="results-grid">
+          <div class="nutrition-data">
+            <h3>Chỉ số dinh dưỡng</h3>
+            <div class="data-item">
+              <span>Lượng Calo duy trì (TDEE)</span>
+              <span id="tdee-result"></span>
+            </div>
+            <div class="data-item">
+              <span>Lượng Calo mục tiêu</span>
+              <span id="goal-calories-result"></span>
+            </div>
+            <div class="data-item">
+              <span>Protein (g)</span>
+              <span id="protein-result"></span>
+            </div>
+            <div class="data-item">
+              <span>Carbohydrates (g)</span>
+              <span id="carbs-result"></span>
+            </div>
+            <div class="data-item">
+              <span>Fat (g)</span>
+              <span id="fat-result"></span>
+            </div>
+          </div>
+          <div class="macro-chart">
+            <h3>Biểu đồ phân bổ Macros</h3>
+            <div class="chart-container">
+              <canvas id="macroChart"></canvas>
+            </div>
+          </div>
+        </div>
+        <div class="food-suggestions">
+          <h3>Gợi ý món ăn</h3>
+          <div id="food-list-container" class="food-list"></div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2025 FitAI Hub. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

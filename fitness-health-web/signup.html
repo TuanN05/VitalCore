@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="vi" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Đăng Ký - FitAI</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="container">
+        <a href="index.html" class="logo">FitAI</a>
+      </div>
+    </nav>
+    <main class="page-content">
+      <div class="auth-container card">
+        <h2>Tạo tài khoản mới</h2>
+        <form id="signup-form">
+          <div class="form-grid">
+            <div class="form-group full-width">
+              <label for="name">Họ và Tên</label>
+              <input type="text" id="name" required />
+            </div>
+            <div class="form-group full-width">
+              <label for="email">Email</label>
+              <input type="email" id="email" required />
+            </div>
+            <div class="form-group full-width">
+              <label for="password">Mật khẩu</label>
+              <input type="password" id="password" minlength="6" required />
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary btn-lg">Đăng Ký</button>
+        </form>
+        <p>Đã có tài khoản? <a href="login.html">Đăng nhập</a></p>
+      </div>
+    </main>
+    <script src="js/auth.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

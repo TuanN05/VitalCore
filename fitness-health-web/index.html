@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="vi" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Health & Fitness Hub - Trang chủ</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" href="img/favicon.png" type="image/png" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="container">
+        <a href="index.html" class="logo">FitAI</a>
+        <ul class="nav-links">
+          <li><a href="index.html" class="active">Trang Chủ</a></li>
+          <li><a href="nutrition.html">Dinh Dưỡng & Luyện Tập</a></li>
+          <li><a href="chat.html">AI Coach</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="about.html">Giới Thiệu</a></li>
+          <li><a href="team.html">Thành Viên</a></li>
+        </ul>
+        <div class="nav-auth">
+          <a href="login.html" id="login-btn" class="btn btn-secondary"
+            >Đăng Nhập</a
+          >
+          <div id="user-info" style="display: none">
+            <span id="username-display"></span>
+            <a href="user.html" class="btn btn-primary">Tài khoản</a>
+            <button id="logout-btn" class="btn btn-secondary">Đăng xuất</button>
+          </div>
+        </div>
+        <button id="theme-toggle" class="theme-toggle-btn">🌙</button>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <div class="container">
+        <h1>Xây Dựng Lối Sống Khỏe Mạnh,<br />Bắt Đầu Từ Hôm Nay</h1>
+        <p>
+          Theo dõi dinh dưỡng, lên kế hoạch tập luyện và nhận tư vấn từ trợ lý
+          AI thông minh.
+        </p>
+        <a href="nutrition.html" class="btn btn-primary btn-lg">Bắt đầu ngay</a>
+      </div>
+    </header>
+
+    <main class="container page-content">
+      <section class="features">
+        <h2>Tính Năng Vượt Trội</h2>
+        <div class="feature-grid">
+          <div class="feature-card">
+            <img
+              src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80"
+              alt="Dinh dưỡng"
+              class="feature-icon"
+            />
+            <h3>Phân Tích Dinh Dưỡng</h3>
+            <p>
+              Tính toán TDEE, macros (protein, carb, fat) dựa trên thông tin cá
+              nhân và mục tiêu của bạn.
+            </p>
+          </div>
+          <div class="feature-card">
+            <img
+              src="https://images.unsplash.com/photo-1514512364185-4c2b678c5a68?auto=format&fit=crop&w=400&q=80"
+              alt="Luyện tập"
+              class="feature-icon"
+            />
+            <h3>Gợi Ý Luyện Tập</h3>
+            <p>
+              Nhận các bài tập và lịch trình được cá nhân hóa để đạt được mục
+              tiêu thể hình.
+            </p>
+          </div>
+          <div class="feature-card">
+            <img
+              src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80"
+              alt="AI Coach"
+              class="feature-icon"
+            />
+            <h3>Trợ Lý AI 24/7</h3>
+            <p>
+              Hỏi đáp mọi thắc mắc về sức khỏe, dinh dưỡng và tập luyện với
+              chatbot thông minh.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2025 FitAI Hub. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="js/auth.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
