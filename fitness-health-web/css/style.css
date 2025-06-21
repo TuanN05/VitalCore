@@ -9,9 +9,13 @@
   --background-color: #f4f4f9;
   --surface-color: #ffffff;
   --text-color: #333;
+  --text-primary: #111;
+  --text-secondary: #666;
   --border-color: #ddd;
   --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   --border-radius: 8px;
+  --input-bg: #f9f9f9;
+  --card-bg: #fff;
 }
 
 [data-theme="dark"] {
@@ -474,6 +478,101 @@ body[data-theme="dark"] .btn-secondary {
   color: var(--text-color);
   opacity: 0.8;
   font-size: 0.9rem;
+}
+
+/* Workout Page Styles */
+.workout-section {
+  padding: 2rem 0;
+}
+
+.workout-categories {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.workout-card {
+  background: var(--card-bg);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.workout-card:hover {
+  transform: translateY(-5px);
+}
+
+.workout-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.workout-card h3 {
+  padding: 1rem;
+  margin: 0;
+}
+
+.workout-card p {
+  padding: 0 1rem;
+  color: var(--text-secondary);
+}
+
+.workout-card button {
+  margin: 1rem;
+}
+
+.workout-planner {
+  background: var(--card-bg);
+  padding: 2rem;
+  border-radius: 10px;
+  margin: 2rem 0;
+}
+
+.planner-form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-control {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  background: var(--input-bg);
+  color: var(--text-primary);
+}
+
+.tips-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.tip-card {
+  background: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.tip-card h4 {
+  margin-top: 0;
+  color: var(--text-primary);
+}
+
+.tip-card p {
+  margin-bottom: 0;
+  color: var(--text-secondary);
 }
 
 /* Responsive adjustments */

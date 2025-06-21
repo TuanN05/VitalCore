@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="vi" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Health & Fitness Hub - Luyện Tập</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" href="img/favicon.png" type="image/png" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="container">
+        <a href="index.html" class="logo">VitalCore</a>
+        <ul class="nav-links">
+          <li><a href="index.html">Trang Chủ</a></li>
+          <li><a href="nutrition.html">Dinh Dưỡng</a></li>
+          <li><a href="workout.html" class="active">Luyện Tập</a></li>
+          <li><a href="chat.html">AI Coach</a></li>
+          <li><a href="blog.html">Blog</a></li>
+        </ul>
+        <div class="nav-auth">
+          <a href="login.html" id="login-btn" class="btn btn-secondary"
+            >Đăng Nhập</a
+          >
+          <div id="user-info" style="display: none">
+            <span id="username-display"></span>
+            <a href="user.html" class="btn btn-primary">Tài khoản</a>
+            <button id="logout-btn" class="btn btn-secondary">Đăng xuất</button>
+          </div>
+        </div>
+        <button id="theme-toggle" class="theme-toggle-btn">🌙</button>
+      </div>
+    </nav>
+
+    <main class="container page-content">
+      <section class="workout-section">
+        <h1>Chương Trình Luyện Tập</h1>
+
+        <div class="workout-categories">
+          <div class="workout-card">
+            <img
+              src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?auto=format&fit=crop&w=500&q=80"
+              alt="Cardio"
+            />
+            <h3>Cardio</h3>
+            <p>Các bài tập nâng cao sức bền và đốt cháy mỡ thừa</p>
+            <button class="btn btn-primary">Xem Bài Tập</button>
+          </div>
+
+          <div class="workout-card">
+            <img
+              src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?auto=format&fit=crop&w=500&q=80"
+              alt="Strength Training"
+            />
+            <h3>Tập Sức Mạnh</h3>
+            <p>Phát triển cơ bắp và tăng cường sức mạnh</p>
+            <button class="btn btn-primary">Xem Bài Tập</button>
+          </div>
+
+          <div class="workout-card">
+            <img
+              src="https://images.unsplash.com/photo-1601925260368-ae2f83cf9b2f?auto=format&fit=crop&w=500&q=80"
+              alt="Flexibility"
+            />
+            <h3>Tăng Độ Dẻo Dai</h3>
+            <p>Cải thiện tính linh hoạt và phòng ngừa chấn thương</p>
+            <button class="btn btn-primary">Xem Bài Tập</button>
+          </div>
+        </div>
+
+        <section class="workout-planner">
+          <h2>Lập Kế Hoạch Tập Luyện</h2>
+          <div class="planner-form">
+            <div class="form-group">
+              <label for="fitness-goal">Mục Tiêu</label>
+              <select id="fitness-goal" class="form-control">
+                <option value="lose-weight">Giảm Cân</option>
+                <option value="build-muscle">Tăng Cơ</option>
+                <option value="improve-fitness">Tăng Sức Bền</option>
+                <option value="maintain">Duy Trì Sức Khỏe</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="experience-level">Trình Độ</label>
+              <select id="experience-level" class="form-control">
+                <option value="beginner">Người Mới Bắt Đầu</option>
+                <option value="intermediate">Trung Bình</option>
+                <option value="advanced">Nâng Cao</option>
+              </select>
+            </div>
+            <button class="btn btn-primary">Tạo Kế Hoạch</button>
+          </div>
+        </section>
+
+        <section class="workout-tips">
+          <h2>Lời Khuyên Tập Luyện</h2>
+          <div class="tips-grid">
+            <div class="tip-card">
+              <h4>Khởi Động</h4>
+              <p>
+                Luôn dành 5-10 phút khởi động trước khi tập để tránh chấn
+                thương.
+              </p>
+            </div>
+            <div class="tip-card">
+              <h4>Tăng Dần</h4>
+              <p>Tăng cường độ tập luyện từ từ để cơ thể thích nghi.</p>
+            </div>
+            <div class="tip-card">
+              <h4>Nghỉ Ngơi</h4>
+              <p>Đảm bảo nghỉ ngơi đủ giữa các buổi tập để cơ bắp phục hồi.</p>
+            </div>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2025 VitalCore Hub. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="js/auth.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
