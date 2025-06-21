@@ -21,9 +21,12 @@
               <label for="email">Email</label>
               <input type="email" id="email" required />
             </div>
-            <div class="form-group full-width">
+            <div class="form-group full-width password-wrapper">
               <label for="password">Mật khẩu</label>
-              <input type="password" id="password" required />
+              <div class="password-field">
+                <input type="password" id="password" required />
+                <span id="togglePassword" class="toggle-password">&#128065;</span>
+              </div>
             </div>
           </div>
           <button type="submit" class="btn btn-primary btn-lg">
@@ -33,7 +36,18 @@
         <p>Chưa có tài khoản? <a href="signup.html">Đăng ký ngay</a></p>
       </div>
     </main>
+
     <script src="js/auth.js"></script>
     <script src="js/main.js"></script>
+    <script>
+      const passwordInput = document.getElementById("password");
+      const togglePassword = document.getElementById("togglePassword");
+
+      togglePassword.addEventListener("click", () => {
+        const isPassword = passwordInput.type === "password";
+        passwordInput.type = isPassword ? "text" : "password";
+        togglePassword.textContent = isPassword ? "🙈" : "👁️";
+      });
+    </script>
   </body>
 </html>
