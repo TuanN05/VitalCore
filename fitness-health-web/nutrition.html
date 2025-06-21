@@ -12,17 +12,13 @@
         <a href="index.html" class="logo">VitalCore</a>
         <ul class="nav-links">
           <li><a href="index.html">Trang Chủ</a></li>
-          <li>
-            <a href="nutrition.html" class="active">Dinh Dưỡng</a>          <li><a href="workout.html">Luyện Tập</a></li>
-
-          </li>
+          <li><a href="nutrition.html" class="active">Dinh Dưỡng</a></li>
+          <li><a href="workout.html">Luyện Tập</a></li>
           <li><a href="chat.html">AI Coach</a></li>
           <li><a href="blog.html">Blog</a></li>
         </ul>
         <div class="nav-auth">
-          <a href="login.html" id="login-btn" class="btn btn-secondary"
-            >Đăng Nhập</a
-          >
+          <a href="login.html" id="login-btn" class="btn btn-secondary">Đăng Nhập</a>
           <div id="user-info" style="display: none">
             <span id="username-display"></span>
             <a href="user.html" class="btn btn-primary">Tài khoản</a>
@@ -48,7 +44,9 @@
             </div>
             <div class="form-group">
               <label for="age">Tuổi</label>
-              <input type="number" id="age" min="15" max="100" required />
+              <select id="age" required>
+                <option value="">-- Chọn tuổi --</option>
+              </select>
             </div>
             <div class="form-group">
               <label for="gender">Giới tính</label>
@@ -59,11 +57,15 @@
             </div>
             <div class="form-group">
               <label for="height">Chiều cao (cm)</label>
-              <input type="number" id="height" min="100" max="250" required />
+              <select id="height" required>
+                <option value="">-- Chọn chiều cao --</option>
+              </select>
             </div>
             <div class="form-group">
               <label for="weight">Cân nặng (kg)</label>
-              <input type="number" id="weight" min="30" max="200" required />
+              <select id="weight" required>
+                <option value="">-- Chọn cân nặng --</option>
+              </select>
             </div>
             <div class="form-group">
               <label for="activity">Mức độ vận động</label>
@@ -71,9 +73,7 @@
                 <option value="1.2">Ít vận động (làm việc văn phòng)</option>
                 <option value="1.375">Vận động nhẹ (tập 1-3 ngày/tuần)</option>
                 <option value="1.55">Vận động vừa (tập 3-5 ngày/tuần)</option>
-                <option value="1.725">
-                  Vận động nhiều (tập 6-7 ngày/tuần)
-                </option>
+                <option value="1.725">Vận động nhiều (tập 6-7 ngày/tuần)</option>
                 <option value="1.9">Vận động rất nhiều (vận động viên)</option>
               </select>
             </div>
@@ -86,9 +86,7 @@
               <option value="gain">Tăng cân (dư thừa ~500 kcal)</option>
             </select>
           </div>
-          <button type="submit" class="btn btn-primary btn-lg">
-            Tính toán ngay
-          </button>
+          <button type="submit" class="btn btn-primary btn-lg">Tính toán ngay</button>
         </form>
       </div>
 
@@ -141,5 +139,22 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="js/auth.js"></script>
     <script src="js/main.js"></script>
+
+    <!-- ✅ Tự động tạo danh sách tuổi, chiều cao, cân nặng -->
+    <script>
+      function populateSelect(id, min, max) {
+        const select = document.getElementById(id);
+        for (let i = min; i <= max; i++) {
+          const option = document.createElement("option");
+          option.value = i;
+          option.textContent = i;
+          select.appendChild(option);
+        }
+      }
+
+      populateSelect("age", 15, 90);
+      populateSelect("height", 100, 250);
+      populateSelect("weight", 30, 200);
+    </script>
   </body>
 </html>
