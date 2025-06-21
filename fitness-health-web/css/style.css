@@ -426,6 +426,80 @@ body[data-theme="dark"] .btn-secondary {
   border-top: 1px solid var(--border-color);
 }
 
+/* --- Team Section --- */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.team-member-card {
+  background-color: var(--surface-color);
+  border-radius: var(--border-radius);
+  padding: 2rem;
+  text-align: center;
+  box-shadow: var(--box-shadow);
+  transition: all 0.3s ease;
+}
+
+.team-member-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.team-member-card .avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1.5rem;
+  border: 4px solid var(--primary-color);
+  padding: 4px;
+  background-color: var(--surface-color);
+  transition: transform 0.3s ease;
+}
+
+.team-member-card:hover .avatar {
+  transform: scale(1.1);
+}
+
+.team-member-card h3 {
+  color: var(--primary-color);
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.team-member-card p {
+  color: var(--text-color);
+  opacity: 0.8;
+  font-size: 0.9rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .team-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .team-member-card .avatar {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  .team-member-card {
+    padding: 1.5rem;
+  }
+
+  .team-member-card .avatar {
+    width: 100px;
+    height: 100px;
+  }
+}
+
 /* --- Responsive --- */
 @media (max-width: 992px) {
   .results-grid {

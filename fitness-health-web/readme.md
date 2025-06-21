@@ -8,8 +8,7 @@ Trong terminal đó, điều hướng đến thư mục fitness-health-web.
 Chạy lệnh:
 Bash
 
-    node server.js
-
+node server.js
 Nếu bạn thấy dòng chữ Server is running on http://localhost:3000, nghĩa là backend đã sẵn sàng.
 Chạy Frontend:
 
